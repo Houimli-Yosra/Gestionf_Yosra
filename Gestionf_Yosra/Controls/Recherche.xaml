@@ -1,0 +1,24 @@
+﻿<Window x:Class="Gestionf_Yosra.Controls.Recherche"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestionf_Yosra.Controls"
+        mc:Ignorable="d"
+        Title="Recherche" Height="450" Width="800">
+    <Grid Margin="3,4,-3,-55">
+        <TextBox x:Name="RechercheBox" Canvas.Left="70" Canvas.Top="48" Margin="59,33,444,398"/>
+        <Button Content="Rechercher" Canvas.Left="375" Canvas.Top="46" Margin="428,27,207,396" Click="Button_Click" />
+
+        <Button Content="Ajout Realisateur" Canvas.Left="375" Canvas.Top="46" Margin="44,366,582,54" Click="Button_Click_1" />
+        <Button Content="Ajout Producteur" Canvas.Left="375" Canvas.Top="46" Margin="340,366,284,53" RenderTransformOrigin="0.591,1.43" Click="Button_Click_2" />
+        <Button Content="Ajout Acteur" Canvas.Left="375" Canvas.Top="46" Margin="583,364,35,54" RenderTransformOrigin="0.497,0.771" Click="Button_Click_3" />
+
+        <DataGrid Name="dataGridR" Margin="-1,95,2,145"  >
+            <DataGrid.Columns >
+              
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

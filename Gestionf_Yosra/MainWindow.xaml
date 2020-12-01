@@ -1,0 +1,102 @@
+﻿<Window x:Class="Gestionf_Yosra.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestionf_Yosra"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="523.515" Width="1009.406">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="local:CustomCommands.Ouvrir" CanExecute="Ouvrir_CanExecute" Executed="Ouvrir_Executed" />
+        <CommandBinding Command="local:CustomCommands.Enregistrer" CanExecute="Enregistrer_CanExecute" Executed="Enregistrer_Executed" />
+        <CommandBinding Command="local:CustomCommands.AjouterFilm" CanExecute="AjouterFilm_CanExecute" Executed="AjouterFilm_Executed" />
+        <CommandBinding Command="local:CustomCommands.AjouterPersonne" CanExecute="AjouterPersonner_CanExecute" Executed="AjouterPersonne_Executed" />
+        <CommandBinding Command="local:CustomCommands.Rechercher" CanExecute="Rechercher_CanExecute" Executed="Rechercher_Executed" />
+
+    </Window.CommandBindings>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Fichier">
+                <MenuItem Header="Ouvrir" Command="local:CustomCommands.Ouvrir" Click="MenuItem_Click_1"  />
+                <MenuItem Header="Enregistrer" Command="local:CustomCommands.Enregistrer" Click="MenuItem_Click_2" />
+                <MenuItem Header="Rechercher" Command="local:CustomCommands.Rechercher"  />
+
+
+            </MenuItem>
+            <MenuItem Header="Ajouter" >
+
+                <MenuItem Header="Ajouter Films" Command="local:CustomCommands.AjouterFilm" Click="MenuItem_Click"  />
+                <MenuItem Header="Ajouter Personne" Command="local:CustomCommands.AjouterPersonne" Click="MenuItem_Click_3" />
+
+            </MenuItem>
+
+            <MenuItem>
+
+
+            </MenuItem>
+            <Button Content="Rechercher" Width="71" Height="19" Click="Button_Click"/>
+            <TextBox x:Name="T" Width="207" Height="40"></TextBox>
+            <Button x:Name="BtnDetail" Content="Affiche_Détails" Width="100" Height="19" Click="BtnDetail_Click" />
+
+
+
+        </Menu>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="179*"/>
+                <ColumnDefinition Width="282*"/>
+                <ColumnDefinition Width="540*"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid Name="dataGrid" Margin="2,198,-1,0" Grid.ColumnSpan="3" SelectionChanged="dataGrid_SelectionChanged"   >
+                <DataGrid.Columns >
+                    <!--<DataGridTextColumn Header="Titre" Binding="{Binding Titre}"/>
+                    <DataGridTextColumn Header="Année" Binding="{Binding Annee}"/>
+                    <DataGridTextColumn Header="Genre" Binding="{Binding Genre}"/>-->
+
+
+
+                </DataGrid.Columns>
+
+
+
+
+            </DataGrid>
+
+
+            <DataGrid Name="dataGridx" Margin="0,0,5,261" Grid.ColumnSpan="3" >
+                <DataGrid.Columns>
+
+                    <!--<DataGridTextColumn Header="Nom" Binding="{Binding Nom}"/>
+                    <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}"/>
+                    <DataGridTextColumn Header="Age" Binding="{Binding Age}"/>-->
+
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+
+
+        </Grid>
+
+
+
+
+        <!--<Grid x:Name="DataGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="13*"/>
+                <ColumnDefinition Width="779*"/>
+            </Grid.ColumnDefinitions>
+          
+
+        </Grid>-->
+
+
+
+
+
+    </DockPanel>
+
+
+</Window>

@@ -1,0 +1,71 @@
+﻿<Window x:Class="Gestionf_Yosra.Controls.AfficheDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestionf_Yosra.Controls"
+        mc:Ignorable="d"
+        Title="AfficheDetail" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="73*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Afficher" Margin="92,16,12,379" Click="Button_Click" Grid.Column="1"/>
+        <Label Content="Acteurs :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,23,0,0" RenderTransformOrigin="-1.196,-2.346" Height="35"/>
+        <Label Content="Producteurs :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,137,0,0" RenderTransformOrigin="-1.196,-2.346" Height="25"/>
+        <Label Content="Realisateurs :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,266,0,0" RenderTransformOrigin="-1.196,-2.346" Height="25"/>
+
+        <DataGrid Name="dataGrid1" Margin="1,46,-1,287" SelectionChanged="dataGrid1_SelectionChanged" Grid.ColumnSpan="2"   >
+            <DataGrid.Columns >
+                <!--<DataGridTextColumn Header="Titre" Binding="{Binding Titre}"/>
+                    <DataGridTextColumn Header="Année" Binding="{Binding Annee}"/>
+                    <DataGridTextColumn Header="Genre" Binding="{Binding Genre}"/>-->
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid Name="dataGrid2" Margin="1,168,0,147" Grid.ColumnSpan="2"   >
+
+
+
+
+
+
+            <DataGrid.Columns >
+                <!--<DataGridTextColumn Header="Titre" Binding="{Binding Titre}"/>
+                    <DataGridTextColumn Header="Année" Binding="{Binding Annee}"/>
+                    <DataGridTextColumn Header="Genre" Binding="{Binding Genre}"/>-->
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid Name="dataGrid3" Margin="1,290,0,38" Grid.ColumnSpan="2"   >
+            <DataGrid.Columns >
+                <!--<DataGridTextColumn Header="Titre" Binding="{Binding Titre}"/>
+                    <DataGridTextColumn Header="Année" Binding="{Binding Annee}"/>
+                    <DataGridTextColumn Header="Genre" Binding="{Binding Genre}"/>-->
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Valider" HorizontalAlignment="Left" Width="75" Margin="193,388,0,11" Click="Button_Click_1" Grid.Column="1"/>
+        <TextBox x:Name="AfficheBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="47,385,0,0" Grid.Column="1"/>
+        <Label Content="Role" HorizontalAlignment="Left" Margin="423,387,0,6" RenderTransformOrigin="0.152,-1.25"/>
+
+        <!--<DataGrid Name="dataGrid4" Margin="50,2,493,367"   >
+            <DataGrid.Columns >
+                -->
+        <!--<DataGridTextColumn Header="Titre" Binding="{Binding Titre}"/>
+                    <DataGridTextColumn Header="Année" Binding="{Binding Annee}"/>
+                    <DataGridTextColumn Header="Genre" Binding="{Binding Genre}"/>-->
+        <!--
+
+            </DataGrid.Columns>
+        </DataGrid>-->
+        <TextBox x:Name="AfficheBox1" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134" Margin="157,0,0,0" RenderTransformOrigin="0.188,0.411"/>
+        <TextBox x:Name="AfficheBox2" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap"  VerticalAlignment="Top" Width="132" Margin="294,-4,0,0" RenderTransformOrigin="0.188,0.411"/>
+        <TextBox x:Name="AfficheBox3" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap"  VerticalAlignment="Top" Width="132" Margin="434,-4,0,0" RenderTransformOrigin="0.188,0.411" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+﻿<Window x:Class="Gestionf_Yosra.Controls.FilmsControls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestionf_Yosra.Controls"
+        mc:Ignorable="d"
+        Title="FilmsControls" Height="450" Width="800">
+    <Grid>
+
+        <Canvas>
+            <Label Content="Titre" Canvas.Left="94" Canvas.Top="68"/>
+            <TextBox x:Name="textBox3" Width="250" Text="{Binding Path=Titre}" Height="20" Canvas.Left="209" Canvas.Top="68"/>
+            <Label Content="Année du film" Canvas.Left="82" Canvas.Top="113"/>
+            <TextBox x:Name="textBox2" Width="250" Text="{Binding Path=Annee}" Height="20" Canvas.Left="209" Canvas.Top="113"/>
+
+            <Label Content="Genre" Canvas.Left="70" Canvas.Top="146"/>
+            <TextBox x:Name="textBox1" Width="250" Text="{Binding Path=Genre}" Height="20" Canvas.Left="209" Canvas.Top="152"/>
+
+            <!--<Label Content="Prenom de L'acteur" Canvas.Left="59" Canvas.Top="194"/>
+            <TextBox x:Name="textBox4" Width="250" Text="{Binding Path=Prenom}" Height="20" Canvas.Left="215" Canvas.Top="199"/>-->
+
+            <Label Content="Acteur" Canvas.Left="64" Canvas.Top="197" Width="106" RenderTransformOrigin="0.435,2.637"/>
+            <Button Content="Ajouter Acteur" Width="97" Canvas.Left="243" Canvas.Top="200" Click="Button_Click_1"  />
+
+            <Label Content="Producteur" Canvas.Left="63" Canvas.Top="256" Width="106" RenderTransformOrigin="0.435,2.637"/>
+            <Button Content="Ajouter Producteur" Width="121" Canvas.Left="244" Canvas.Top="253" Click="Button_Click_2"  />
+
+            <Label Content="Realisateurs" Canvas.Left="61" Canvas.Top="302" Width="106" RenderTransformOrigin="0.435,2.637"/>
+            <Button Content="Ajouter Realisateus" Width="117" Canvas.Left="244" Canvas.Top="292" Click="Button_Click_3"  />
+
+
+
+            <Button Content="Enregistrer" Width="75" Canvas.Left="675" Canvas.Top="351" Click="Button_Click"/>
+
+            <!--<Button Content="Ok" Width="75" Canvas.Top="239" Canvas.Left="384" Click="Button_Click_1"/>
+            <Button Content="Afficher" Width="75" Canvas.Left="612" Canvas.Top="332" Click="Button_Click_2"/>-->
+
+        </Canvas>
+    </Grid>
+</Window>
